@@ -133,3 +133,9 @@ body {
 .signin-button:active {
   background: #191826;
 }
+
+@media only screen and (max-width: 950px) {
+  .login-div {
+    width: 90%;
+  }
+}
