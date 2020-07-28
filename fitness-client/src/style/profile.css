@@ -193,6 +193,7 @@
 }
 
 .input-add-food {
+  width: 90%;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 3px;
