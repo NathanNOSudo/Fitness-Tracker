@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.mkvdbo",
+      "sha256_cert_fingerprints": ["88:80:53:00:6C:2D:C9:C1:47:79:82:F3:3D:1F:0E:A7:C3:7E:9E:23:6F:FF:A5:0D:72:33:AD:86:33:B3:E6:54"]
+    }
+  }
+]
