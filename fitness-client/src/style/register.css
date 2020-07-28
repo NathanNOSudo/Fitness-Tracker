@@ -1,5 +1,5 @@
-.register-wrapper {
-  width: 540px;
+div .register-wrapper {
+  width: 430px;
   height: 960px;
   margin: 0 auto;
   padding: 60px 35px 35px 35px;
