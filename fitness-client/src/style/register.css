@@ -1,5 +1,5 @@
-div .register-wrapper {
-  width: 430px;
+.register-wrapper {
+  width: 540px;
   height: 960px;
   margin: 0 auto;
   padding: 60px 35px 35px 35px;
@@ -64,4 +64,10 @@ div .register-wrapper {
   right: 0;
   top: -10px;
   transition: 0.25s all ease;
+}
+@media only screen and (max-width: 950px) {
+  .register-wrapper {
+    width: 90%;
+    height: 100%;
+  }
 }
