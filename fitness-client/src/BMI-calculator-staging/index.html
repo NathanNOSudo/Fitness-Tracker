@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Body fat calculator for males and females. Calculate body fat, lean mass, fat mass, and weight at goal body fat percentage.">
+
+    <title>Body Fat Calculator</title>
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid p-3" style="max-width:500px">
+
+        <div class="text-center">
+            <h1 class="p-3">Body fat calculator</h1>
+        </div>
+
+        <form id="calculator">
+            <div class="container-fluid p-2">
+                <div class="row">
+                    <div class="mx-auto btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-info active" for="male">
+                            <input type="radio" name="sex" value="male" id="male" autocomplete="off" checked> Male
+                        </label>
+                        <label class="btn btn-info" for="female">
+                            <input type="radio" name="sex" value="female" id="female" autocomplete="off"> Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="height" class="col col-form-label">Height</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="height" id="height" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">cm</label>
+
+            </div>
+            <div class="form-group row">
+                <label for="weight" class="col col-form-label">Weight</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="weight" id="weight" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">kg</label>
+            </div>
+
+            <div class="form-group row">
+                <label for="neck" class="col col-form-label">Neck</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="neck" id="neck" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">cm</label>
+            </div>
+
+            <div class="form-group row">
+                <label for="waist" class="col col-form-label">Waist</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="waist" id="waist" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">cm</label>
+            </div>
+
+            <div class="form-group row">
+                <label for="hip" class="col col-form-label">Hips</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="hip" id="hip" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">cm</label>
+            </div>
+
+            <div class="form-group row">
+                <label for="goal-bodyfat" class="col col-form-label">Goal body fat</label>
+                <div class="col px-1">
+                    <input type="number" step="0.25" min="0" name="goal-bodyfat" id="goal-bodyfat" class="form-control">
+                </div>
+                <label class="col px-1 col-form-label">%</label>
+            </div>
+
+            <div class="container-fluid p-2">
+                <div class="row">
+                    <div class="mx-auto btn-group-toggle" data-toggle="buttons">
+                        <label>
+                            <button class="btn btn-info"> 💪 </button>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h1 class="p-3">Results</h1>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group row">
+                    <label class="col col-form-label">
+                        Body fat
+                    </label>
+                    <div class="col px-1">
+                        <input class="form-control" type="text" id="bodyfat" readonly>
+                    </div>
+                    <label class="col px-1 col-form-label">%</label>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col col-form-label">
+                        Lean mass
+                    </label>
+                    <div class="col px-1">
+                        <input class="form-control" type="text" id="lean-mass" readonly>
+                    </div>
+                    <label class="col px-1 col-form-label">kg</label>
+                </div>
+                <div class="form-group row">
+                    <label class="col col-form-label">
+                        Fat mass
+                    </label>
+                    <div class="col px-1">
+                        <input class="form-control" type="text" id="fat-mass" readonly>
+                    </div>
+                    <label class="col px-1 col-form-label">kg</label>
+                </div>
+                <div class="form-group row">
+                    <label class="col col-form-label">
+                        Weight at goal body fat
+                    </label>
+                    <div class="col px-1">
+                        <input class="form-control" type="text" id="weight-at-goal-bodyfat" readonly>
+                    </div>
+                    <label class="col px-1 col-form-label">kg</label>
+                </div>
+        </form>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo
+                        " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49
+                        " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy
+                        " crossorigin="anonymous "></script>
+
+</body>
+
+<script>
+    document.getElementById("calculator").onchange = handleChange;
+
+    function handleChange() {
+        sex = document.getElementById("calculator").elements["sex"].value;
+        height = parseFloat(document.getElementById("height").value);
+        weight = parseFloat(document.getElementById("weight").value);
+        neck = parseFloat(document.getElementById("neck").value);
+        waist = parseFloat(document.getElementById("waist").value);
+        hip = parseFloat(document.getElementById("hip").value);
+        desiredBodyfat = parseFloat(document.getElementById("goal-bodyfat").value);
+        bodyfat = calcBf(sex, height, neck, waist, hip).toFixed(1);
+        fatMass = (weight * bodyfat / 100).toFixed(1);
+        leanMass = (weight - fatMass).toFixed(1);
+        goalWeight = (leanMass / (1 - (desiredBodyfat / 100))).toFixed(1);
+
+        if (isNaN(goalWeight)) {
+            console.log(desiredBodyfat, bodyfat, fatMass, leanMass, goalWeight);
+            document.getElementById("bodyfat").placeholder = "... ";
+            document.getElementById("lean-mass").placeholder = "... ";
+            document.getElementById("fat-mass").placeholder = "... ";
+            document.getElementById("weight-at-goal-bodyfat").placeholder = "... ";
+        } else {
+            console.log(desiredBodyfat, bodyfat, fatMass, leanMass, goalWeight);
+            document.getElementById("bodyfat").placeholder = bodyfat;
+            document.getElementById("lean-mass").placeholder = leanMass;
+            document.getElementById("fat-mass").placeholder = fatMass;
+            document.getElementById("weight-at-goal-bodyfat").placeholder = goalWeight;
+        }
+    }
+
+    function calcBf(sex, height, neck, waist, hip) {
+        if (sex !== "male" && sex !== "female") {
+            return -1;
+        }
+        if (sex === "male") {
+            return (495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450);
+        }
+        if (sex === "female") {
+            return (495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(height)) - 450);
+        }
+    }
+</script>
+
+</html>
