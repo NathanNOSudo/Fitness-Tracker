@@ -2,7 +2,7 @@
 
 # :running: :fork_and_knife: FITNESS TRACKER :fork_and_knife: :running:
 
-An app designed with health and fitness in mind. Capable of tracking a users caloric intake, calories burned, ammount of calories needed, fetching healthy recipes and so much more.
+An app designed with health and fitness in mind! Capable of tracking a users caloric intake, calories burned, ammount of calories needed, fetching healthy recipes and so much more.
 
 ## Summary
 
